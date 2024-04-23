@@ -48,17 +48,18 @@ def create_app(overrides={}):
     # Home Page
     @app.route('/home', methods=['GET'])
     def home_page():
-        random_movie = Movie.query.order_by(func.random()).first()
+        return render_template('home_page.html')
+        # random_movie = Movie.query.order_by(func.random()).first()
 
-        while random_movie and random_movie.thumbnail == "Movie_Thumbnail_Link":
-            random_movie = Movie.query.order_by(func.random()).first()
+        # while random_movie and random_movie.thumbnail == "Movie_Thumbnail_Link":
+        #     random_movie = Movie.query.order_by(func.random()).first()
 
-        if random_movie:
-            return render_template('home_page.html', random_movie=random_movie)
-        else:
-            movies = Movie.query.all()
-            random_movie = movies[0]
-            return render_template('home_page.html', random_movie=random_movie)
+        # if random_movie:
+        #     return render_template('home_page.html', random_movie=random_movie)
+        # else:
+        #     movies = Movie.query.all()
+        #     random_movie = movies[0]
+        #     return render_template('home_page.html', random_movie=random_movie)
 
     # Movies Page
     @app.route('/movies', methods=['GET'])
