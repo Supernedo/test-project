@@ -16,7 +16,7 @@ from App.controllers import (
 from App.views import views
 
 #Temp imports
-from App.models import Movie, User, Review, Movie_Review
+from App import *
 from flask import request, redirect, url_for, flash
 from sqlalchemy import func
 import random, json
