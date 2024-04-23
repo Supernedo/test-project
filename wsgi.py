@@ -9,7 +9,7 @@ from App.main import create_app
 from App.controllers import ( create_user, get_all_users_json, get_all_users )
 
 # Temp Imports
-from App.models import *
+from App import *
 from flask.cli import FlaskGroup
 import requests
 
