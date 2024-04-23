@@ -43,7 +43,7 @@ def initialize():
     db.create_all()
 
     # Test render
-    logging.info('Currently in initialize')
+    # logging.info('Currently in initialize')
 
     create_user('BobTheBuilder', 'bob', 'bobpass')
 
